@@ -1,0 +1,371 @@
+
+/* General styles */
+@import url(https://fonts.googleapis.com/css?family=open+Sans);
+            h1 {
+                font-family: 'Open Sans', serif;
+            }
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;   
+}
+
+* {
+    font-family: "Raleway";
+    box-sizing: border-box;
+}
+
+h2 {
+    vertical-align: center;
+    text-align:center;
+}
+
+/*Styling navigation bar */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: end;
+    background: #64bc56;
+    height: 1em;
+    padding: 1em;
+}
+#menu-toggle {
+    display: none;
+}
+
+.menu-button-container {
+    height: 100%;
+    width: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #f6f6f6;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: #fff;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(360deg);
+}
+
+#menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#menu-toggle:checked ~ .menu li {
+    height: 2em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: left;
+    background:linear-gradient(rgba(243, 217, 177, 0.751), rgb(223, 222, 222));
+}
+.menu > li {
+    margin: 0 0.1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding: 0.1em 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+.menu > li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    opacity: 0.9;
+
+}
+
+.menu > li a:hover {
+    color: rgb(192, 52, 52);
+}
+
+.menu-open {
+    transform:translateX(0);
+    background: red;
+}
+
+/* Styling introduction section*/
+.intro-container {
+    height: 100vh;
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.144),
+        rgba(255, 255, 255, 0.336)),
+        url("/image/image_bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.intro-container h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.2em;
+}
+
+.main-title {
+    text-transform: capitalize;
+    margin-top: 1.5em;
+    color: 	#11ecdc;
+}
+
+/* Styling image and self introduction section */
+.about-me img {
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    border: 2px solid black;
+    clip-path: circle(40.2% at 50% 50%);
+    margin: auto;
+    box-shadow: rgb(46, 41, 36);
+    display: flex;
+    align-items: center;
+}
+
+.about-me h1 {
+    text-align: center;
+}
+
+.about-me p {
+    color: #616161;
+    position: relative;
+    line-height: 18pt;
+    font-size: 12pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Styling services section */
+.services {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    background: rgba(209, 229, 236, 0.905);
+}
+
+.services h2 {
+    color: rgb(0, 0, 0);
+}
+
+.services ul {
+    margin-left: auto;
+    margin-right: auto;
+    column-count:calc(5/3);
+    column-gap: 0.1em;
+    font-size: 0.7em;
+    width: 60%; 
+    
+}
+
+.services li {
+    box-sizing: border-box;
+    border: 0.2em solid #616161;
+    box-shadow: #e0d6d6;
+    padding: 1.5em;
+    list-style: none;
+    margin-bottom: 0.2em;
+    background:linear-gradient(#fff, #bdb79b );
+}
+
+.services li:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* Styling the section of project I done and its code */
+.projects {
+    width: auto;
+    height: auto;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.projects h3 {
+    text-align: center;
+    margin-top: 1em;
+    color: rgb(22, 21, 21);
+}
+
+.projects ul {
+    display:inline-block;
+}
+
+.projects ul li {
+    text-align: center;
+    border: 0.1em solid black;
+    list-style: none;
+    font-size: 1em;
+    float: right;
+    margin: 0.5em;
+    padding: 0.5em 0.5em;
+}
+
+.projects ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.projects li:hover {
+    background: #f67b0f;
+}
+
+/*styling contact section*/
+.contact-list {
+    text-align: center;
+    background-image: url("/image/City_image.png");
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 1em;
+}
+
+.contact-list p {
+    color: rgb(253, 252, 251);
+}
+
+.contact-list p i {
+    color: rgb(153, 15, 15);
+    padding: 0 0.5em;
+}
+
+.contact-list h2, h5 {
+    color: goldenrod;
+    
+}
+.contact-form input {
+    padding: 0.5em 0.5em;
+    margin: 0.5em 0.5em;
+}
+
+.contact-form label {
+    color: rgb(21, 247, 255);
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: .5em .5em;
+    border: none;
+    cursor: pointer;
+    margin-bottom: .5em;
+}
+
+.contact-form button:hover {
+    background: #0d6992;
+}
+
+/* Styling the footer section */
+footer {
+    padding: 40px 0;
+    background: #292929;
+    margin-top: 5px;
+}
+
+footer .footer-social-icons {
+    text-align: center;
+    padding-bottom: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.footer-social-icons a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid rgb(47, 205, 249);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+    background: #000000;
+    text-decoration: none;
+}
+
+footer .footer-social-icons a:hover {
+    opacity: 0.9;
+}
+footer .footer-menu-list ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8em;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+
+}
+
+footer .footer-menu-list ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+footer .footer-menu-list ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}

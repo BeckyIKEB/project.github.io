@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Portfolio</title>
+  </head>
+  <body>
+      <nav>
+        <section class = "nav-bar">
+            <input type="checkbox" id="menu-toggle"/>
+            <label class="menu-button-container" for="menu-toggle">
+              <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="#introduction-part">About Me</a>
+              </li>
+              <li>
+                <a href="#service-i-provided">Services</a>
+              </li>
+              <li>
+                <a href="#i-developed">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+        </section>
+      </nav>
+      
+      <!--Introduction part-->
+      <section class="intro-container">
+          <h1 class="main-title" id="home">Hi, I am Bereket Satore </h1>
+      </section>
+      
+      <!--image and self introduction part-->
+      <section class="about-me" id="introduction-part">
+          <h2>Who am I</h2>
+          <img src="/image/Beki_image.jpg" alt="image of the site author">
+          <p>I am a full-stack web developer that develops and deploys the front-end and
+            back-end elements of a website, web application, or computer program.
+          </p>
+      </section>
+
+      <!--my services-->
+      <section class="services" id="service-i-provided">
+        <h2>What I do</h2>
+        <ul>
+          <li>Designing & developing a fully functional & dynamic website</li>
+          <li>Coding the Server-side elements</li>
+          <li>Modifying + Testing</li>
+          <li>Collaborating with designers and developers</li>
+          <li>Ensure cross-platform compatibility</li>
+          <li>Designing user experience</li>
+        </ul>
+      </section>
+
+        <!--project and code-->
+      <section class="projects" id="i-developed">
+          <h3>My Projects and it's Code</h3>
+          <ul>
+            <li>
+              <a href="">projects</a>
+            </li>
+            <li>
+              <a href="">Codes</a>
+            </li>
+            <li>
+              <a href="/Doc/Bereket_Satore_Resume@.pdf" target="_blank" rel="noopener">Resume</a>
+            </li>
+          </ul>        
+      </section>
+      <!--contact section-->
+      <section class="contact-list" id="contact">
+        <h2>Contact Me</h2>
+        <p><i class="fa fa-map-marker"></i>Seattle, Us</p>
+        <p><i class="fa fa-phone"></i>Phone: +1 206-945-1849</p>
+        <p><i class="fa fa-envelope"></i>Email: Bekiteshome25@gmail.com</p>
+        <h5>Lets get in touch. Send me a message:</h5>
+        <form action="mailto:bekiteshome25@gmail.com" class="contact-form" target="_blank" method="post">
+          <label for="name">Name</label>
+          <input type="text" id="name" required><br>
+          <label for="email">Email</label>
+          <input type="text" id="email" required><br>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" required><br>
+          <label for="message">Message</label>
+          <input type="text" id="message" required><br>
+          <button type="submit">
+            <i class="fa fa-paper-plane"></i><br>Send
+          </button>       
+        </form>
+
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <section class="footer-social-icons">
+            <a href="https://www.linkedin.com/in/bereket-t-satore/" class="fab fa-linkedin" target="_blank"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="" class="fab fa-github"></a>
+            <a href="" class="fab fa-facebook"></a>
+        </section>
+        <section class="footer-menu-list">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#introduction-part">About Me</a>
+            </li>
+            <li>
+              <a href="#service-i-provided">Services</a>
+            </li>
+            <li>
+              <a href="#i-developed">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+          <p class="copyright">Bereket T Satore &copy;2022</p>
+        </section>
+      </footer>
+      <script src="/js/main.js"></script>
+  </body>
+</html>
